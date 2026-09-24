@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Manrope', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --color-deep-navy: #102C43;
+    --color-dark-navy: #071A29;
+    --color-warm-white: #F7F6F2;
+    --color-soft-grey: #EEF1F2;
+    --color-accent-primary: #D94B35;
+    --color-accent-secondary: #E56A43;
+    --color-dark-text: #11181D;
+  }
+
+  body {
+    background-color: var(--color-warm-white);
+    color: var(--color-dark-text);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-heading {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fine hairline dividers matching reference */
+.trust-divider {
+  width: 1px;
+  background: rgba(17, 24, 29, 0.12);
+}
+
+/* Subtle image hover zoom */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071A29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #254763;
+  border-radius: 9999px;
+  border: 2px solid #071A29;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D94B35;
+}
